@@ -10,10 +10,10 @@ package com.mycompany.tugasmandiripbo;
  */
 public class TugasmandiriPBO {
 
-    private String namaBarang;
-    private String kategori;
-    private String lokasi;
-    private String status;
+    protected String namaBarang;
+    protected String kategori;
+    protected String lokasi;
+    protected String status;
     
     TugasmandiriPBO(String namaBarang, String kategori, String lokasi, String status) {
         setNamaBarang(namaBarang);
@@ -68,21 +68,22 @@ public class TugasmandiriPBO {
         
     void tampilkanInformasi() {
         System.out.println("=== LOSTLINK ===");
-        System.out.println("Nama Barang : " + getNamaBarang());
-        System.out.println("Kategori    : " + getKategori());
-        System.out.println("Lokasi      : " + getLokasi());
-        System.out.println("Status      : " + getStatus());
+        System.out.println("Nama Barang     : " + getNamaBarang());
+        System.out.println("Kategori        : " + getKategori());
+        System.out.println("Lokasi          : " + getLokasi());
+        System.out.println("Status          : " + getStatus());
     }
     
     
     public static void main(String[] args){
    
-        TugasmandiriPBO barang1 = new TugasmandiriPBO(
-                "Dompet",
-                "Barang Pribadi",
-                "Gedung Ilmu Komputer",
-                "Hilang"
-        );
+        BarangHilang barang1 = new BarangHilang(
+        "Dompet",
+        "Barang Pribadi",
+        "Gedung Ilmu Komputer",
+        "Hilang",
+        "Naura"
+    );
         
         barang1.tampilkanInformasi();
         System.out.println();
